@@ -33,11 +33,11 @@ const item = {
 
 
 const handleKeyDown = (e) => {
-  if (!todoItem ){
-    alert('Enter something')
-    return;
+//   if (!todoItem ){
+//     alert('Enter something')
+//     return;
     
-}
+// }
 
   const item = {
     id : Math.floor(Math.random()*500),
@@ -45,11 +45,10 @@ const handleKeyDown = (e) => {
     done: false
   }
 
+  
   if (e.key === 'Enter') {
     setList(oldList => [...oldList,item])
     setTodoItem("")
-
- 
   }
 };
 
