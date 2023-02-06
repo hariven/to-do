@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "toDo List",
+  "name": "toDo List",
   "icons": [
     {
       "src": "favicon.ico",
@@ -13,7 +13,23 @@
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "logo384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "logo256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "maskable_icon.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "app_icon.png",
       "type": "image/png",
       "sizes": "512x512"
     }

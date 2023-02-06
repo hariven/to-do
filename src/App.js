@@ -1,11 +1,20 @@
 import './App.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
+const getLocalItems = () => {
+     let list = localStorage.getItem('lists');
+    console.log(list);
+     if (list) {
+         return JSON.parse(localStorage.getItem('lists'));
+     } else {
+         return [];
+     }
+    }
 
 
 function App() {
 const [todoItem, setTodoItem] = useState('')
-const [list, setList] = useState([])
+const [list, setList] = useState(getLocalItems())
 
 
 const todoUpdate = (e) =>{
@@ -71,6 +80,13 @@ const strike = (index) => {
 
 }
 
+
+
+  //add data to localStorage
+
+  useEffect(() => {
+    localStorage.setItem('lists', JSON.stringify(list))
+  }, [list])
 
   return (
     <div className='container'>
